@@ -9,7 +9,7 @@ endif
 let g:colors_name = "camouflage"
 
 if version >= 700
-  hi CursorLine     guibg=#100A09
+  hi CursorLine     guibg=#100A09 cterm=none ctermbg=DarkGrey
   hi CursorColumn   guibg=#070100
   hi MatchParen     guibg=#505050 gui=bold
   hi Pmenu          guifg=yellowgreen guibg=#323232
