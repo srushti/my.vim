@@ -10,7 +10,7 @@ let g:colors_name = "camouflage"
 
 if version >= 700
   hi CursorLine     guibg=#100A09 cterm=none ctermbg=darkgray
-  hi CursorColumn   guibg=#070100
+  hi CursorColumn   guibg=#100A09 cterm=none ctermbg=darkgray
   hi MatchParen     guibg=#505050 gui=bold
   hi Pmenu          guifg=yellowgreen guibg=#323232
   hi PmenuSel       guifg=yellowgreen guibg=darkred
