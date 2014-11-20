@@ -73,6 +73,8 @@ hi DiffDelete       guifg=NONE  guibg=#220000 ctermbg=darkred
 hi DiffChange       guifg=NONE  guibg=#222222 ctermbg=darkgray
 hi DiffText         guifg=NONE  guibg=#31383F ctermbg=darkblue
 
+" Special for JS
+hi link jsObjectKey      Identifier
 
 " For gitgutter
 hi clear SignColumn
