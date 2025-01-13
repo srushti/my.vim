@@ -31,10 +31,11 @@ hi Visual           guibg=#313131 ctermbg=darkgray gui=none
 hi SpecialKey       guifg=#4A4A59 ctermfg=grey gui=none
 hi Search           guifg=NONE    guibg=NONE    gui=underline ctermfg=NONE    ctermbg=NONE    cterm=underline
 hi Underline                                    gui=none
+hi! link @variable Variable
 
 " Syntax highlighting
 hi Comment guifg=darkgray gui=none ctermfg=darkgray
-hi Constant guifg=#478943 gui=none ctermfg=darkgreen
+hi! Constant guifg=#A5A200
 hi Number guifg=#64CC8A gui=none ctermfg=lightgreen
 hi Identifier guifg=#96B58E ctermfg=grey gui=none
 hi Statement guifg=#815900 gui=none ctermfg=brown
@@ -45,36 +46,20 @@ hi PreProc guifg=#C94000 gui=none ctermfg=brown
 hi Keyword guifg=#009664 ctermfg=darkcyan gui=none
 hi String guifg=#4BA5B3 ctermfg=lightblue gui=none
 hi Type guifg=#A5A300 gui=none ctermfg=darkyellow
+hi Delimiter guifg=#408080 gui=none
 
-" Special for Ruby
-hi link rubyClass             Keyword
-hi link rubyModule            Keyword
-hi link rubyKeyword           Keyword
-hi link rubyOperator          Operator
-hi link rubyIdentifier        Identifier
-hi link rubyInstanceVariable  Identifier
-hi link rubyGlobalVariable    Identifier
-hi link rubyClassVariable     Identifier
-hi link rubyConstant          Type
+hi! link @keyword.import Special
+hi! link @keyword.export Special
+hi! link @type.builtin Type
+hi! link @punctuation.delimiter Normal
+hi! link @punctuation.bracket Delimiter
 
-" Special for XML
-hi link xmlTag          Keyword
-hi link xmlTagName      Conditional
-hi link xmlEndTag       Keyword
-
-" Special for HTML
-hi link htmlTag         Keyword
-hi link htmlTagName     Conditional
-hi link htmlEndTag      Keyword
 
 " Special for Diff
 hi DiffAdd          guifg=NONE  guibg=#002200 ctermbg=darkgreen
 hi DiffDelete       guifg=NONE  guibg=#220000 ctermbg=darkred
 hi DiffChange       guifg=NONE  guibg=#222222 ctermbg=darkgray
 hi DiffText         guifg=NONE  guibg=#31383F ctermbg=darkblue
-
-" Special for JS
-hi link jsObjectKey      Identifier
 
 " For gitgutter
 hi clear SignColumn
