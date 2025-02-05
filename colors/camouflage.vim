@@ -31,7 +31,6 @@ hi Visual           guibg=#313131 ctermbg=darkgray gui=none
 hi SpecialKey       guifg=#4A4A59 ctermfg=grey gui=none
 hi Search           guifg=NONE    guibg=NONE    gui=underline ctermfg=NONE    ctermbg=NONE    cterm=underline
 hi Underline                                    gui=none
-hi @variable.builtin guifg=yellow  gui=none ctermfg=darkyellow
 hi! link @variable Variable
 
 " Syntax highlighting
@@ -54,6 +53,7 @@ hi! link @keyword.export Special
 hi! link @type.builtin Type
 hi! link @punctuation.delimiter Normal
 hi! link @punctuation.bracket Delimiter
+hi! link @variable.builtin Type
 
 
 " Special for Diff
