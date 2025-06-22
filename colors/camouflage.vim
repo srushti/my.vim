@@ -38,6 +38,8 @@ hi Comment guifg=darkgray gui=none ctermfg=darkgray
 hi! Constant guifg=#A5A200
 hi Number guifg=#64CC8A gui=none ctermfg=lightgreen
 hi Identifier guifg=#96B58E ctermfg=grey gui=none
+hi @variable guifg=#FAB802 ctermfg=grey gui=none
+"hi TelescopeNormal guifg=#96B58E ctermfg=grey gui=none
 hi Statement guifg=#815900 gui=none ctermfg=brown
 hi Operator guifg=#00D2D2 gui=none ctermfg=cyan
 hi Function guifg=#408080 gui=none ctermfg=darkcyan
@@ -62,5 +64,18 @@ hi DiffDelete       guifg=NONE  guibg=#220000 ctermbg=darkred
 hi DiffChange       guifg=NONE  guibg=#222222 ctermbg=darkgray
 hi DiffText         guifg=NONE  guibg=#31383F ctermbg=darkblue
 
+" Special for JS
+hi link jsObjectKey      Identifier
+
+" Special for TS
+hi link typescriptObjectLabel Identifier
+
+" Special for Telescope
+hi link TelescopeNormal Normal
+
 " For gitgutter
 hi clear SignColumn
+
+" For treesitter
+hi link @variable                   Identifier
+
