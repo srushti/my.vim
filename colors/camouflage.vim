@@ -20,7 +20,7 @@ endif
 hi Cursor           guifg=NONE guibg=#FFFFFF gui=none
 hi Normal           guifg=#D5E285 guibg=#070100 ctermfg=red gui=none
 hi NonText          guifg=#4A4A59 gui=none
-hi LineNr           guifg=#7E8841 guibg=#201A19 ctermfg=lightyellow gui=none
+" hi LineNr           guifg=#7E8841 guibg=#201A19 ctermfg=lightyellow gui=none
 hi StatusLine       guifg=#00D2D2 guibg=#38290B ctermfg=cyan gui=italic
 hi StatusLineNC     guifg=#00D2D2 guibg=#2F2928 ctermfg=cyan gui=none
 hi VertSplit        guifg=#00D2D2 guibg=#201A19 ctermfg=cyan gui=none
@@ -31,14 +31,16 @@ hi Visual           guibg=#313131 ctermbg=darkgray gui=none
 hi SpecialKey       guifg=#4A4A59 ctermfg=grey gui=none
 hi Search           guifg=NONE    guibg=NONE    gui=underline ctermfg=NONE    ctermbg=NONE    cterm=underline
 hi Underline                                    gui=none
-hi! link @variable Variable
+hi! link Normal @variable
+hi! link LineNr PeacockFg
 
 " Syntax highlighting
 hi Comment guifg=darkgray gui=none ctermfg=darkgray
 hi! Constant guifg=#A5A200
 hi Number guifg=#64CC8A gui=none ctermfg=lightgreen
 hi Identifier guifg=#96B58E ctermfg=grey gui=none
-hi @variable guifg=#FAB802 ctermfg=grey gui=none
+hi @variable guifg=#D5E285 ctermfg=grey gui=none
+" hi @variable guifg=#FAB802 ctermfg=grey gui=none
 "hi TelescopeNormal guifg=#96B58E ctermfg=grey gui=none
 hi Statement guifg=#815900 gui=none ctermfg=brown
 hi Operator guifg=#00D2D2 gui=none ctermfg=cyan
