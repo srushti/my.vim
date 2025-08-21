@@ -16,8 +16,8 @@ function M.setup()
 
   local highlights = {
     -- Version >= 700 highlights
-    CursorLine = { bg = "#100A09", cterm = { none = true }, ctermbg = "darkgray" },
-    CursorColumn = { bg = "#100A09", cterm = { none = true }, ctermbg = "darkgray" },
+    CursorLine = { bg = "#100A09", ctermbg = "darkgray" },
+    CursorColumn = { bg = "#100A09", ctermbg = "darkgray" },
     MatchParen = { bg = "#505050", bold = true },
     Pmenu = { fg = "yellowgreen", bg = "#323232" },
     PmenuSel = { fg = "yellowgreen", bg = "darkred" },
