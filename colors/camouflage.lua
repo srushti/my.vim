@@ -1,28 +1,21 @@
--- Camouflage colorscheme for Neovim
--- Converted from Vim script to Lua
-
 local M = {}
 
 function M.setup()
-  -- Reset colors
   vim.cmd("hi clear")
   if vim.fn.exists("syntax_on") then
     vim.cmd("syntax reset")
   end
 
-  -- Set background and colorscheme name
   vim.o.background = "dark"
   vim.g.colors_name = "camouflage"
 
   local highlights = {
-    -- Version >= 700 highlights
     CursorLine = { bg = "#100A09", ctermbg = "darkgray" },
     CursorColumn = { bg = "#100A09", ctermbg = "darkgray" },
     MatchParen = { bg = "#505050", bold = true },
     Pmenu = { fg = "yellowgreen", bg = "#323232" },
     PmenuSel = { fg = "yellowgreen", bg = "darkred" },
 
-    -- Background and menu colors
     Cursor = { fg = "NONE", bg = "#FFFFFF" },
     Normal = { fg = "#D5E285", bg = "#070100", ctermfg = "red" },
     NonText = { fg = "#4A4A59" },
@@ -44,7 +37,6 @@ function M.setup()
     },
     Underline = {},
 
-    -- Syntax highlighting
     Comment = { fg = "darkgray", ctermfg = "darkgray" },
     Constant = { fg = "#A5A200" },
     Number = { fg = "#64CC8A", ctermfg = "lightgreen" },
@@ -59,27 +51,21 @@ function M.setup()
     Type = { fg = "#A5A300", ctermfg = "darkyellow" },
     Delimiter = { fg = "#408080" },
 
-    -- TreeSitter highlights
     ["@variable"] = { fg = "#D5E285", ctermfg = "grey" },
 
-    -- Diff colors
     DiffAdd = { fg = "NONE", bg = "#002200", ctermbg = "darkgreen" },
     DiffDelete = { fg = "NONE", bg = "#220000", ctermbg = "darkred" },
     DiffChange = { fg = "NONE", bg = "#222222", ctermbg = "darkgray" },
     DiffText = { fg = "NONE", bg = "#31383F", ctermbg = "darkblue" },
 
-    -- Clear SignColumn for gitgutter
     SignColumn = { fg = "NONE", bg = "NONE" },
   }
 
-  -- Apply all highlights
   for group, opts in pairs(highlights) do
     vim.api.nvim_set_hl(0, group, opts)
   end
 
-  -- Handle links separately
   local links = {
-    -- Links from original file
     ["Normal"] = "@variable",
     ["LineNr"] = "PeacockFg",
     ["@keyword.import"] = "Special",
@@ -94,13 +80,11 @@ function M.setup()
     ["@variable"] = "Identifier",
   }
 
-  -- Apply links
   for from, to in pairs(links) do
     vim.api.nvim_set_hl(0, from, { link = to })
   end
 end
 
--- Auto-setup when required
 M.setup()
 
 return M
